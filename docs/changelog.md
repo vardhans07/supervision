@@ -6,6 +6,7 @@ date_modified: 2026-09-17
 # Changelog
 
 ### Unreleased <small>upcoming</small>
+- Fixed `InferenceSlicer` crash caused by conflicting slice-level `source_image` metadata during merge ([#2596](https://github.com/roboflow/supervision/pull/2596))
 
 - Removed, as scheduled for `supervision-0.31.0`: `sv.ByteTrack` (use `ByteTrackTracker` from the `trackers` package instead); the `supervision.keypoint` module (use `supervision.key_points`); `create_tiles` and `overlay_image` in `supervision.utils.image`; `ensure_cv2_image_for_annotation`, `ensure_pil_image_for_annotation`, and `ensure_cv2_image_for_processing` in `supervision.utils.conversion`; `validate_keypoint_confidence` and `validate_keypoints_fields` in `supervision.validators`; the `normalized_xyxy` argument of `sv.denormalize_boxes` (use `xyxy`); the `supervision.dataset.utils` import path for `sv.mask_to_rle`/`sv.rle_to_mask` (import from `supervision.detection.utils.converters` instead); `sv.LMM` and `Detections.from_lmm` (use `sv.VLM`/`Detections.from_vlm`); and the legacy `MeanAveragePrecision` in `supervision.metrics.detection` (use `supervision.metrics.mean_average_precision.MeanAveragePrecision`, exposed as `sv.metrics.MeanAveragePrecision`). See [Deprecated](deprecated.md) for the full list. [#2582](https://github.com/roboflow/supervision/pull/2582)
 
